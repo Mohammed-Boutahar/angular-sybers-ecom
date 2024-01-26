@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { initFlowbite } from 'flowbite';
+
 
 @Component({
   selector: 'app-root',
@@ -12,4 +14,8 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppComponent {
   title = 'angular-sybers-ecom';
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }

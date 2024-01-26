@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { ThreeInterfaceComponent } from '../three-interface/three-interface.component';
+import { HomeImagesComponent } from '../home-images/home-images.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [NavbarComponent, ThreeInterfaceComponent, HomeImagesComponent],
   template: `
-  <section>
-    <form>
-      <input type="text" placeholder="Filter by city">
-      <button class="primary" type="button">Search</button>
-    </form>
-  </section>
+    <div class="col-auto">
+      <div class="row-auto">
+        <app-navbar></app-navbar>
+      </div>
+      <div class="mt-20">
+        <app-home-images />
+      </div>
+      <!-- <app-three-interface/> -->
+    </div>
   `,
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
